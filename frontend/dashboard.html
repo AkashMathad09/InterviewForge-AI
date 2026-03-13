@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MockMate Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+<canvas id="dashboard-network"></canvas>
+
+<div class="cinematic-bg">
+
+<span>AI</span>
+<span>DSA</span>
+<span>{ }</span>
+<span>&lt;/&gt;</span>
+<span>HR</span>
+<span>?</span>
+<span>🎤</span>
+
+</div>
+<div class="dashboard-container">
+
+<!-- SIDEBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+MockMate
+</div>
+
+<ul class="nav-links">
+
+<li class="active">🏠 Dashboard</li>
+<li>🎤 Start Interview</li>
+<li onclick="goPerformance()">📊 Performance</li>
+<li>📚 Question Bank</li>
+<li>👤 Profile</li>
+
+</ul>
+
+</nav>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+
+<div class="hero-section">
+
+<h1>Welcome to MockMate AI</h1>
+
+<p>
+MockMate is an AI-powered mock interview platform designed to help students
+prepare for real-world technical and HR interviews. Practice with structured
+questions, receive feedback, and improve your confidence before facing real recruiters.
+</p>
+
+<div class="hero-buttons">
+
+<button class="start-interview" onclick="openInterviewModal()">
+Start Your Mock Interview
+</button>
+
+<button class="learn-more">
+Learn How It Works
+</button>
+
+</div>
+
+</div>
+<div class="info-section">
+
+<h2>Why Mock Interviews Matter</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+<h3>Build Confidence</h3>
+<p>
+Mock interviews simulate real interview scenarios and help reduce anxiety
+before facing real recruiters.
+</p>
+</div>
+
+<div class="info-card">
+<h3>Identify Weak Areas</h3>
+<p>
+Practice sessions reveal gaps in technical knowledge, communication,
+and problem-solving skills.
+</p>
+</div>
+
+<div class="info-card">
+<h3>Improve Communication</h3>
+<p>
+MockMate helps you articulate answers clearly and structure your responses effectively.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="info-section">
+
+<h2>How MockMate Helps You Improve</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+<h3>AI Question Generator</h3>
+<p>
+Get randomized interview questions for HR, technical, and system design interviews.
+</p>
+</div>
+
+<div class="info-card">
+<h3>Performance Tracking</h3>
+<p>
+Track progress across multiple mock interviews and identify areas to improve.
+</p>
+</div>
+
+<div class="info-card">
+<h3>Structured Interview Flow</h3>
+<p>
+Practice with a realistic interview environment similar to actual hiring processes.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="guide-section">
+
+<h2>How to Take a Mock Interview</h2>
+
+<div class="steps">
+
+<div class="step">
+<span>1</span>
+<p>Select interview type (HR, Technical, DSA, System Design).</p>
+</div>
+
+<div class="step">
+<span>2</span>
+<p>Read the question carefully and think before answering.</p>
+</div>
+
+<div class="step">
+<span>3</span>
+<p>Type your response clearly and explain your reasoning.</p>
+</div>
+
+<div class="step">
+<span>4</span>
+<p>Review feedback and improve your next attempt.</p>
+</div>
+
+</div>
+
+</div>
+<!-- CARDS -->
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>AI Mock Interview</h3>
+
+<p>Practice interviews with intelligent feedback.</p>
+
+<button>Launch</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Performance</h3>
+
+<p>Track your interview progress and analytics.</p>
+
+<button onclick="goPerformance()">View</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Question Bank</h3>
+
+<p>Explore 500+ interview questions.</p>
+
+<button>Explore</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Recent Activity</h3>
+
+<p>No interviews completed yet.</p>
+
+<button>Start Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="interview-modal" id="interviewModal">
+
+<div class="modal-content">
+
+<h2>Select Interview Type</h2>
+
+<div class="interview-options">
+
+<button onclick="startInterview('HR')">HR Interview</button>
+
+<button onclick="startInterview('Technical')">Technical Interview</button>
+
+<button onclick="startInterview('DSA')">Data Structures</button>
+
+<button onclick="startInterview('System Design')">System Design</button>
+
+</div>
+
+<button class="close-modal" onclick="closeInterviewModal()">Close</button>
+
+</div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

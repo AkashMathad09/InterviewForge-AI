@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MockMate AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<canvas id="neural-network"></canvas>
+
+<div class="cinematic-bg">
+<span>AI</span>
+<span>?</span>
+<span>{ }</span>
+<span>&lt;/&gt;</span>
+<span>HR</span>
+<span>DSA</span>
+<span>AI</span>
+<span>🎤</span>
+</div>
+
+<div class="background-blobs">
+<div class="blob1"></div>
+<div class="blob2"></div>
+</div>
+
+<div class="main-container">
+
+<div class="left-panel">
+
+<h1>MockMate AI</h1>
+
+<p id="typing-text"></p>
+
+<div class="features">
+<div class="feature">⚡ AI Interview Feedback</div>
+<div class="feature">🎯 Skill Based Questions</div>
+<div class="feature">📊 Performance Analytics</div>
+</div>
+
+<button class="start-btn" onclick="openLogin()">Start Interview Practice</button>
+
+</div>
+
+
+<!-- LOGIN CARD -->
+
+<div class="login-card">
+
+<h2>Welcome Back</h2>
+<p class="subtitle">Login to continue your preparation</p>
+
+<form>
+
+<div class="input-group">
+<input type="email" required>
+<label>Email Address</label>
+</div>
+
+<div class="input-group password-field">
+<input type="password" id="password" required>
+<label>Password</label>
+<span class="toggle-password" onclick="togglePassword()">👁</span>
+</div>
+
+<div class="options">
+<label>
+<input type="checkbox"> Remember me
+</label>
+<a href="#">Forgot Password?</a>
+</div>
+
+<button type="button" class="login-btn" onclick="goDashboard()">Login</button>
+
+<div class="divider">
+<span>or continue with</span>
+</div>
+
+<div class="social-login">
+<button class="google">Google</button>
+<button class="github">GitHub</button>
+</div>
+
+<p class="signup">
+Don't have an account?
+<a href="javascript:void(0)" onclick="showSignup()">Create account</a>
+</p>
+
+</form>
+
+</div>
+
+
+<!-- SIGNUP CARD -->
+
+<div class="signup-card" style="display:none;">
+
+<h2>Create Account</h2>
+<p class="subtitle">Start your interview preparation</p>
+
+<form>
+
+<div class="input-group">
+<input type="text" required>
+<label>First Name</label>
+</div>
+
+<div class="input-group">
+<input type="text" required>
+<label>Last Name</label>
+</div>
+
+<div class="input-group">
+<input type="tel" required>
+<label>Phone Number</label>
+</div>
+
+<div class="input-group">
+<input type="email" required>
+<label>Email</label>
+</div>
+
+<div class="input-group">
+<input type="password" required>
+<label>Create Password</label>
+</div>
+
+<div class="select-group">
+<label>Interview Interest</label>
+
+<select>
+<option>HR Interview</option>
+<option>Technical Interview</option>
+<option>Data Structures</option>
+<option>System Design</option>
+<option>Behavioral Interview</option>
+</select>
+
+</div>
+
+<button type="button" class="login-btn" onclick="createAccount()">Create Account</button>
+
+<p class="signup">
+Already have an account?
+<a href="javascript:void(0)" onclick="showLogin()">Login</a>
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
