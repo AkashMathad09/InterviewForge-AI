@@ -1,6 +1,8 @@
 import uuid
 import json
 from questions import get_question
+from voice_interview import listen_answer
+from ai_engine import evaluate_answer
 
 SESSION_FILE = "data/sessions.json"
 
@@ -39,3 +41,33 @@ def save_session(session):
 def next_question(company):
 
     return get_question(company)
+
+question = "Explain hash tables"
+
+print("Question:", question)
+
+answer = listen_answer()
+
+feedback = evaluate_answer(question, answer)
+
+print(feedback)
+
+def next_difficulty(current_level, score):
+
+    if score >= 8:
+
+        if current_level == "easy":
+            return "medium"
+
+        if current_level == "medium":
+            return "hard"
+
+    if score <= 4:
+
+        if current_level == "hard":
+            return "medium"
+
+        if current_level == "medium":
+            return "easy"
+
+    return current_level
